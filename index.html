@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cyber Breakout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="title">CYBER BREAKOUT</h1>
+      <div class="hud" aria-live="polite">
+        <div class="hud-item"><span class="label">Score</span> <span id="score">0</span></div>
+        <div class="hud-item"><span class="label">Lives</span> <span id="lives">3</span></div>
+        <div class="hud-item"><span class="label">Best</span> <span id="best">0</span></div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="frame">
+        <canvas id="game" width="480" height="640" aria-label="Cyber Breakout game" role="img"></canvas>
+        <div class="scanlines" aria-hidden="true"></div>
+      </div>
+
+      <div class="controls">
+        <button id="mute" class="icon" aria-label="Toggle sound">🔊</button>
+        <button id="pause" class="icon" aria-label="Pause or resume">⏸</button>
+        <button id="power" class="pill" aria-label="Power-ups">Power-ups: ON</button>
+      </div>
+
+      <div class="touch" id="touchControls" aria-label="Touch controls">
+        <button id="left" class="touch-btn" aria-label="Move left">◀</button>
+        <button id="right" class="touch-btn" aria-label="Move right">▶</button>
+      </div>
+
+      <div class="help" id="help">
+        <div><b>Keyboard:</b> ← → or A/D · <b>Space:</b> launch/pause</div>
+        <div><b>Touch:</b> drag paddle or use buttons</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <button id="start" class="start">Start</button>
+      <div class="status" id="status">Ready.</div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
